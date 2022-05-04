@@ -92,9 +92,10 @@ class RelationalEngine:
                 self.process_insert(command)
 
     def process_assignment(self, assignment):
+        line = get_location(assignment)['line']
         existing_relation = self.get_relation_by_name(assignment.result_name)
         if existing_relation and not existing_relation.is_temporary:
-            raise RelationAlreadyExistsException(assignment.result_name)
+            raise RelationAlreadyExistsException(assignment.result_name, line)
         else:
             temp_relation = self.compute_relational_algebra_operation(assignment.relational_algebra_operation)
             if existing_relation:
