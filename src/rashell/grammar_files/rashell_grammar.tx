@@ -1,0 +1,106 @@
+Instruction:
+Insert | Delete | Operation | PartialRelationalModel | PrintRelation | PrintModel | Exit
+;
+
+PartialRelationalModel:
+relations+=Relation
+;
+
+Relation:
+name=ID '(' attributes+=Attribute[','] ')'
+foreign_keys*=ForeignKey
+;
+
+Attribute:
+is_primary_key?='_'
+is_foreign_key?='#'
+name=ID
+;
+
+ForeignKey:
+referencer_attribute_name=ID 'references' referenced_relation_name=ID '.' referenced_attribute_name=ID
+;
+
+Operation:
+operation_type=Assignment | operation_type=RelationalAlgebraOperation
+;
+
+RelationalAlgebraOperation:
+Projection | Restriction | Join | Union | Intersection | Difference | CartesianProduct
+;
+
+Insert:
+relation_name=ID '.' insert_type=InsertType  '(' values+=Value[','] ')'
+;
+
+InsertType:
+'insert' | 'force_insert'
+;
+
+Delete:
+relation_name=ID '.' delete_type=DeleteType  '(' condition=Condition ')'
+;
+
+DeleteType:
+'delete' | 'force_delete'
+;
+
+Value:
+NUMBER | STRING
+;
+
+Union:
+left_relation=ID 'U' right_relation=ID
+;
+
+Intersection:
+left_relation=ID '∩' right_relation=ID
+;
+
+Difference:
+left_relation=ID '-' right_relation=ID
+;
+
+CartesianProduct:
+left_relation=ID 'X' right_relation=ID
+;
+
+Projection:
+'π' columns+=ID[','] '(' relation_name=ID  ')'
+;
+
+Restriction:
+'σ' condition=Condition '(' relation_name=ID ')'
+;
+
+Condition:
+attribute_name=ID operator=Operator value=Value
+;
+
+Operator:
+'=' | '>=' | '>' | '<=' | '<>' | '<' | '!='
+;
+
+Join:
+left_relation=ID '⋈' right_relation=ID '|' condition=JoinCondition
+;
+
+JoinCondition:
+left_attribute=ID '=' right_attribute=ID
+;
+
+Assignment :
+result_name=ID '=' relational_algebra_operation=RelationalAlgebraOperation
+;
+
+PrintRelation:
+relation_name=ID
+;
+
+PrintModel:
+'.model' | '.raw_model'
+;
+
+Exit:
+'.exit'
+;

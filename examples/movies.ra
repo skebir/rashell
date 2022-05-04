@@ -1,0 +1,23 @@
+Movie(_Code, Title, Genre, Year, #DirectorID)
+  DirectorID references Director.Id
+Director(_Id, Name, Nationality)
+
+Movie.force_insert(0120663, 'Eyes wide shut' , 'Drama' , 1999, 2)
+Movie.force_insert(0116922, 'Lost Highway' , 'Thriller', 1997, 3)
+Movie.force_insert(0110413, 'Leon' , 'Crime' , 1994, 4)
+Movie.force_insert(2872732, 'Lucy' , 'Action' , 2014, 4)
+Movie.force_insert(0119116, 'The Fifth Element', 'Action' , 1997, 4)
+Movie.force_insert(0166924, 'Mullholland Drive' , 'Thriller', 2001, 3)
+Movie.force_insert(0062622, "2001: A Space Odyssey", 'Adventure', 1968, 2) 
+Movie.force_insert(0081505, 'The shining' , 'Horror' , 1980, 2)
+Movie.force_insert(0109830, 'Forrest Gump' , 'Drama' , 1994, 1)
+Movie.force_insert(0118884, 'Contact' , 'Drama' , 1997, 1)
+Movie.force_insert(0066921, 'A Clockwork Orange' , 'Crime' , 1971, 2)
+Movie.force_insert(0093058, 'Full Metal Jacket' , 'War' , 1987, 2)
+Movie.force_insert(0090756, 'Blue Velvet' , 'Mystery' , 1986, 3)
+Movie.force_insert(0088763, 'Back to the future', 'Adventure', 1985, 1)
+
+Director.insert(1, 'Robert Zemeckis', 'US')
+Director.insert(2, 'Stanley Kubrick', 'US')
+Director.insert(3, 'David Lynch', 'US')
+Director.insert(4, 'Luc besson', 'FR')

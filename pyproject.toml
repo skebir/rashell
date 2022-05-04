@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "rashell"
+version = "0.2.0"
+description = "rashell is a Relational Algebra Shell. It provides a DSL to define and populate relational models and a REPL interface to query relational models using relational algebra operations. This tool is intended for educational use only, to illustrate in a more interactive way the underlying concepts of relational databases"
+authors = ["Salim Kebir <s.kebir@esti-annaba.dz>"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Topic :: Education :: Computer Aided Instruction (CAI)"
+]
+homepage = "https://github.com/skebir/rashell"
+keywords = [
+    "Relational Algebra",
+    "Shell",
+    "CLI",
+    "Database"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+rich = "^12.3.0"
+textX = "^3.0.0"
+prompt-toolkit = "^3.0.29"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+rashell = 'rashell.rashell:main'

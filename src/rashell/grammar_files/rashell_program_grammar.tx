@@ -1,0 +1,10 @@
+import rashell_grammar
+
+Program:
+partial_relational_model=PartialRelationalModel
+commands*=Command
+;
+
+Command:
+Insert | Assignment
+;
