@@ -260,7 +260,8 @@ GitHub: https://github.com/skebir/rashell
 ## Keyboard Shortcuts
 - <kbd>F3</kbd> Toggle multiline mode
 - <kbd>tab</kbd> Insert operation
-- <kbd>enter</kbd> Run command when multiline mode is enabled
+- <kbd>alt + enter</kbd> Run command when multiline mode is enabled
+- <kbd>enter</kbd> Run command when multiline mode is disabled
 - <kbd>control + l</kbd> Clear screen
 - <kbd>control + d</kbd> Exit rashell
 
