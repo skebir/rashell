@@ -167,15 +167,15 @@ Movie(_Code, Title, Genre, Year, #DirectorID)
 ## Querying the relational model
 At this stage, it is now possible to query your relational model using standard relational algebra operations (projection, restriction, join, union, intersection, difference and cartesian product). The table below shows the symbol, meaning and syntax of each of the relational algebra operations supported by rashell:
 
-| Operation | Meaning           | Syntax/Example                                 |
-|:---------:|-------------------|------------------------------------------------|
-| ``` π ``` | Projection        | ``` π Name, Nationality (Director) ```         |
-| ``` σ ``` | Restriction       | ``` σ Year > 2015 (Movie) ```                  |
-| ``` ⋈ ``` | Join              | ``` Movie ⋈ Director &#124; DirectorID = ID``` |
-| ``` U ``` | Union             | ``` HorrorMovies U ComedyMovies ```            |
-| ``` ∩ ``` | Intersection      | ``` HorrorMovies ∩ ComedyMovies ```            |
-| ``` - ``` | Difference        | ``` LynchMovies - ComedyMovies ```             |
-| ``` X ``` | Cartesian Product | ``` Movie X Director ```                       |
+| Operation | Meaning           | Syntax/Example                           |
+|:---------:|-------------------|------------------------------------------|
+| ``` π ``` | Projection        | ``` π Name, Nationality (Director) ```   |
+| ``` σ ``` | Restriction       | ``` σ Year > 2015 (Movie) ```            |
+| ``` ⋈ ``` | Join              | ``` Movie ⋈ Director \| DirectorID = ID``` |
+| ``` U ``` | Union             | ``` HorrorMovies U ComedyMovies ```      |
+| ``` ∩ ``` | Intersection      | ``` HorrorMovies ∩ ComedyMovies ```      |
+| ``` - ``` | Difference        | ``` LynchMovies - ComedyMovies ```       |
+| ``` X ``` | Cartesian Product | ``` Movie X Director ```                 |
 
 > It may be difficult to write some symbols such as ⋈, σ, π, and ∩ using a combination of keys. To remedy this, rashell allows you to quickly insert an operation by pressing the <kbd>tab</kbd> key.
 
