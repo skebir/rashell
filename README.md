@@ -1,5 +1,10 @@
 # rashell, a **r**elational **a**lgebra **shell**
 
+![PyPI](https://img.shields.io/pypi/v/rashell?label=version)
+![PyPI - License](https://img.shields.io/pypi/l/rashell)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rashell)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/rashell)
+
 rashell is a **R**elational **A**lgebra **Shell**. It provides a domain-specific language (DSL) to define and populate relational models and a read–eval–print loop (REPL) interface to query relational models using relational algebra operations. This tool is intended for educational use only, to illustrate in a more interactive way the underlying concepts of relational databases
 
 ## Quick Screencast (Duration 02:27)

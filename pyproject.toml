@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rashell"
-version = "0.2.5"
+version = "0.2.6"
 description = "rashell is a Relational Algebra Shell. It provides a DSL to define and populate relational models and a REPL interface to query relational models using relational algebra operations. This tool is intended for educational use only, to illustrate in a more interactive way the underlying concepts of relational databases"
 authors = ["Salim Kebir <s.kebir@esti-annaba.dz>"]
 license = "MIT"
