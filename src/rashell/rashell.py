@@ -7,6 +7,7 @@ from rich import print
 from rich.text import Text
 from textx import TextXError
 
+from rashell.exceptions import RashellException
 from rashell.relational_engine import RelationalEngine
 
 
@@ -70,9 +71,10 @@ def main():
             continue
         except EOFError:
             sys.exit('Goodbye!')
-        except Exception as e:
+        except RashellException as e:
             print(f'[bold red]{e}[/]')
-
+        except TextXError as e:
+            print(f'[bold red]Line {e.line}: {e.message}[/]')
 
 if __name__ == '__main__':
     main()
